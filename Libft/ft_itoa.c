@@ -1,28 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/25 18:15:04 by nvan-den         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-void    *ft_itoa(int n)
+void	*ft_itoa(int n)
 {
-    int     i;
-    int     len;
+	int		i;
+	int		len;
+	char	*a;
 
-    i = 0;
-
-    char    *a;
-
+	i = 0;
 	if (n < 0)
 	{
 		a[i] = ('-');
 		n *= -1;
-        i++;
-        len++;
+		i++;
+		len++;
 	}
-
 	while (n / 10)
 	{
-		ft_itoa(n/10);
-        len++;
+		ft_itoa(n / 10);
+		len++;
 	}
-    a = malloc(sizeof(char) * len + 1);
+	a = malloc(sizeof(char) * len + 1);
 	a[i++] = (n % 10 + '0');
-    a[i] = NULL;
+	a[i] = NULL;
 }

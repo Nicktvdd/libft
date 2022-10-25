@@ -6,33 +6,29 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:00 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 17:35:33 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:51:38 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+//where the fuck do i get the unsigned int from in the function i call??
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int len;
-    int i;
+	int		len;
+	int		i;
+	char	*result;
 
-    len = 0;
-    i = 0;
-
-    char *result;
-
-    while (s[len])
-    {
-        len++;
-    }
-
-    result = malloc(sizeof(char) * len + 1);
-
-    while (s[i])
-    {
-        result[i] = f(i, s[i]); //where the fuck do i get the unsigned int from?
-        i++;
-    }
-    return(result);
+	len = 0;
+	i = 0;
+	while (s[len])
+	{
+		len++;
+	}
+	result = malloc(sizeof(char) * len + 1);
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	return (result);
 }
