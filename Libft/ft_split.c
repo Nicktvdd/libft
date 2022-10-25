@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:10 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:17:25 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:19:26 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	strlen1(char const *s, char c)
 	return (len1);
 }
 
-void	split2(char **split, int len1, int len2)
+void	split2(char const *s, char **split, int len1, int len2)
 {
 	while (s[len1])
 	{
@@ -57,6 +57,7 @@ char	**ft_split(char const *s, char c)
 		split[0][len1] = s[len1];
 		len1++;
 	}
+	split2(s, split, len1, len2);
 	split[0][len1] = NULL;
 	return (split);
 }
