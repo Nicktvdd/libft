@@ -6,12 +6,14 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:10:36 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 19:28:21 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/25 17:35:11 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// i would use strcpy and strlen as well
+// i would use strcpy?
+int	ft_strlen(const char *s);
+
 char	*strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
@@ -20,7 +22,7 @@ char	*strjoin(char const *s1, char const *s2)
 
 	j = 0;
 	i = 0;
-	newstr = malloc((sizeof(s1) * ft_strlen) + (sizeof(s2) * ft_strlen) + 1);
+	newstr = malloc((sizeof(s1) * ft_strlen(*s1)) + (sizeof(s2) * ft_strlen(*s2)) + 1);
 	if (newstr != NULL)
 	{
 		return (NULL);
