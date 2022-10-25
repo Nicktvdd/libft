@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:53:08 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 19:01:07 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/25 19:08:35 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *str, const char *to_find, size_t len)
 {
 	int	i;
 	int	j;
@@ -25,7 +25,7 @@ char	*ft_strstr(char *str, char *to_find)
 				return ((void *)0);
 			i++;
 		}
-		while (str[i] == to_find[j])
+		while (str[i] == to_find[j] && i != len)
 		{
 			j++;
 			i++;
@@ -33,7 +33,7 @@ char	*ft_strstr(char *str, char *to_find)
 		if (to_find[j] == '\0')
 		{
 			i = i - j;
-			return (&str[i]);
+			return (str[i]);
 		}
 	}
 }
