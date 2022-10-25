@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:38:03 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 19:06:09 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:26:28 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	sub = malloc(sizeof(*s) * len + 1);
-	if (sub)
+	if (sub != NULL)
 	{
 		return (NULL);
 	}
@@ -30,4 +30,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	sub[i] = NULL;
+	return (sub);
 }
