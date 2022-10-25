@@ -6,15 +6,19 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:28:17 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:35:44 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/25 18:40:18 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(char c)
+char	ft_toupper(const char c)
 {
-	if (c[i] >= 'a' && c[i] <= 'z')
+	int		i;
+	char	d;
+
+	i = 0;
+	if (c >= 'a' && c <= 'z')
 	{
-		c[i] = c[i] - 32;
+		d = c - 32;
 	}
-	return (c);
+	return (d);
 }
