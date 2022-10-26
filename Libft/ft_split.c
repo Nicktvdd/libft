@@ -6,13 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:10 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:19:26 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:49:36 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>\
 // why is there a free function we can use?
-int	strlen1(char const *s, char c)
+static int	strlen1(char const *s, char c)
 {
 	int		len1;
 
@@ -24,7 +24,7 @@ int	strlen1(char const *s, char c)
 	return (len1);
 }
 
-void	split2(char const *s, char **split, int len1, int len2)
+static void	split2(char const *s, char **split, int len1, int len2)
 {
 	while (s[len1])
 	{
