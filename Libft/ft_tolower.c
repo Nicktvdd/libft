@@ -6,16 +6,17 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:44:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:51:49 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:37:00 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(const char c)
+char	ft_tolower(const char c)
 {
 	int		i;
 	char	d;
 
 	i = 0;
+	d = c;
 	if (c >= 'A' && c <= 'Z')
 	{
 		d = c + 32;
