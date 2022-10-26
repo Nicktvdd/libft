@@ -6,13 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:55:07 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 14:50:35 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:00:14 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	int		i;
 	char	*d;

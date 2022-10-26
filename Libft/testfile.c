@@ -11,6 +11,7 @@ size_t	ft_strlen(const char *s);
 char	ft_toupper(const char c);
 char	ft_tolower(const char c);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 
 void	testalpha(char varc)
@@ -94,21 +95,31 @@ void	teststrnstr(const char *vars, const char *vars2, size_t len)
 		printf("FAIL");
 	printf("\n");
 }
+void	testmemset()
+{
+	char str[50];
+	strcpy(str, "This is a test");
+	printf("ft_memset:  ");
+	if (ft_memset(str, '$', 4) == memset(str, '$', 4))
+		printf("PASS");
+	else
+		printf("FAIL");
+	printf("\n");
+}
 
 int	main(void)
 {
 	unsigned char	varc = 'b';
 	const char *vars = "Nick123";
 	const char *vars2 = "ick";
+	int nr = 4;
 	testalpha(varc);
 	testdigit(varc);
 	testalnum(varc);
 	testascii(varc);
 	testprint(varc);
 	teststrlen(vars);
-
-	// memset
-
+	testmemset();
 
 	// bzero
 
