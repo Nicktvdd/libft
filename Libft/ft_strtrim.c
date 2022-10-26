@@ -6,35 +6,40 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 17:48:48 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:47:20 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-// malloc that shit so it returns a COPY?
+
+size_t	ft_strlen(const char *s);
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
+	char	*newstring;
 
 	i = 0;
 	j = 0;
-	while (s1[i] == set[i])
+	newstring = malloc(sizeof(*s1) * ft_strlen(*s1) + 1);
+	newstring = s1;
+	while (newstring[i] == set[i])
 	{
-		s1[i] = NULL;
+		newstring[i] = NULL;
 		i++;
 	}
-	s1 = &s1[i];
-	while (s1[i])
+	newstring = &newstring[i];
+	while (newstring[i])
 	{
 		i++;
 	}
 	i--;
-	while (s1[i] == set[j])
+	while (newstring[i] == set[j])
 	{
-		s1[i] = NULL;
+		newstring[i] = NULL;
 		i--;
 		j++;
 	}
-	return (s1);
+	return (newstring);
 }
