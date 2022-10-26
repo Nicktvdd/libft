@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 13:47:20 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:50:43 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	newstring = &newstring[i];
 	while (newstring[i])
-	{
 		i++;
-	}
 	i--;
 	while (newstring[i] == set[j])
 	{

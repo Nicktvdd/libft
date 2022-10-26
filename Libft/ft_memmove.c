@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:33:02 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 15:45:34 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:48:59 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ void	*memmove(void *dst, const void *src, size_t len)
 	char	*s;
 
 	i = 0;
-	d = (char*)dst;
-	s = (char*)src;
-
+	d = (char *)dst;
+	s = (char *)src;
 	while (len > 0 && s[i])
 	{
 		d[i] = s[i];

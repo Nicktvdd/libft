@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:53:08 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 14:21:12 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:55:56 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			i++;
 		}
 		if (to_find[j] == '\0')
-		{
 			i = i - j;
-		}
 	}
-	d = (char*)&str[i];
+	d = (char *)&str[i];
 	return (d);
 }
