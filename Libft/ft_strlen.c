@@ -6,11 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:26:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 18:59:22 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:24:06 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s)
 {
 	int	i;
 

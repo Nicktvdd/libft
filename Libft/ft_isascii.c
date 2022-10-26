@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:06:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 18:59:24 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:31:57 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isacii(unsigned int c)
+int	ft_isascii(unsigned int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

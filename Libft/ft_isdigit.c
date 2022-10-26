@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 15:38:06 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 18:59:23 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/26 12:23:29 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(unsigned char c)
+int	ft_isdigit(unsigned char c)
 {
 	if (c >= 48 && c <= 57)
 		return (1);
