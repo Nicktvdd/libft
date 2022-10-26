@@ -1,43 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:53:08 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 14:21:12 by nvan-den         ###   ########.fr       */
+/*   Created: 2022/10/26 13:55:07 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/26 14:50:35 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+void	*memset(void *b, int c, size_t len)
 {
 	int		i;
-	int		j;
 	char	*d;
-
+	
+	d = (char*)b;
 	i = 0;
-	while (1)
-	{	
-		j = 0;
-		while (str[i] != to_find[j])
-		{
-			if (str[i] == '\0' || to_find[j] == '\0')
-				return ((void *)0);
-			i++;
-		}
-		while (str[i] == to_find[j] && i != len)
-		{
-			j++;
-			i++;
-		}
-		if (to_find[j] == '\0')
-		{
-			i = i - j;
-		}
+	while (len > 0)
+	{
+		d[i] = c;
+		len--;
 	}
-	d = (char*)&str[i];
 	return (d);
 }

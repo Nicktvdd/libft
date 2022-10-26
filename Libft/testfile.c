@@ -10,6 +10,7 @@ int	ft_isprint(unsigned char c);
 size_t	ft_strlen(const char *s);
 char	ft_toupper(const char c);
 char	ft_tolower(const char c);
+char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 
 
 void	testalpha(char varc)
@@ -58,7 +59,6 @@ void	testprint(char varc)
 	printf("\n");
 }
 void	teststrlen(const char *vars)
-
 {
 	printf("ft_strlen: ");
 	if (ft_strlen(vars) == strlen(vars))
@@ -85,12 +85,21 @@ void	testtolower(char varc)
 		printf("FAIL");
 	printf("\n");
 }
-
+void	teststrnstr(const char *vars, const char *vars2, size_t len)
+{
+	printf("ft_strnstr: ");
+	if (ft_strnstr(vars, vars2, len) == strnstr(vars, vars2, len))
+		printf("PASS");
+	else
+		printf("FAIL");
+	printf("\n");
+}
 
 int	main(void)
 {
 	unsigned char	varc = 'b';
 	const char *vars = "Nick123";
+	const char *vars2 = "ick";
 	testalpha(varc);
 	testdigit(varc);
 	testalnum(varc);
@@ -131,18 +140,15 @@ int	main(void)
 
 
 	// strnstr
-
+	teststrnstr(vars, vars2, 3);
 
 	// atoi
 
 
+	// calloc
 
-	
-	
-	
-	
-	
-	
+
+	// strdup
 	
 	
 	
