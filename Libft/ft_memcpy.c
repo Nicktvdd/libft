@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 15:33:02 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 14:08:05 by nvan-den         ###   ########.fr       */
+/*   Created: 2022/10/27 14:00:50 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/27 14:09:30 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memmove(void *dst, const void *src, size_t len)
+void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
 	int		i;
 	char	*d;
@@ -21,10 +21,10 @@ void	*memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
-	while (len > 0 && s[i])
+	while (n > 0 && s[i])
 	{
 		d[i] = s[i];
-		len--;
+		n--;
 		i++;
 	}
 	return (dst);
