@@ -1,18 +1,8 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-
-int	ft_isalpha(unsigned char c);
-int	ft_isdigit(unsigned char c);
-int	ft_isalnum(unsigned char c);
-int	ft_isascii(unsigned char c);
-int	ft_isprint(unsigned char c);
-size_t	ft_strlen(const char *s);
-char	ft_toupper(const char c);
-char	ft_tolower(const char c);
-char	*ft_strnstr(const char *str, const char *to_find, size_t len);
-void	*ft_memset(void *b, int c, size_t len);
-void	ft_bzero(void *b, size_t len);
+#include <strings.h>
+#include "libft.h"
 
 
 void	testalpha(char varc)
@@ -98,26 +88,45 @@ void	teststrnstr(const char *vars, const char *vars2, size_t len)
 }
 void	testmemset()
 {
+	int i = 0;
 	char str[50];
 	strcpy(str, "This is a test");
+	char str2[50];
+	strcpy(str2, "This is a test");
 	printf("ft_memset:  ");
-	if (ft_memset(str, '$', 4) == memset(str, '$', 4))
-		printf("PASS");
-	else
-		printf("FAIL");
+
+	while (str[i])
+	{
+		if (str[i] != str2[i])
+		{
+			printf("FAIL");
+			return;
+		}
+		i++;
+	}
+	printf("PASS");
 	printf("\n");
 }
 void	testbzero()
 {
+	int i = 0;
 	char str[50];
 	strcpy(str, "This is a test");
 	char str2[50];
 	strcpy(str2, "This is a test");
 	printf("ft_bzero:  ");
-	if (ft_bzero(str, 4) == bzero(str2, 4))
-		printf("PASS");
-	else
-		printf("FAIL");
+	ft_bzero(str, 4);
+	bzero(str2, 4);
+	while(str[i])
+	{
+		if (str[i] != str2[i])
+		{
+			printf("FAIL");
+			return;
+		}
+		i++;
+	}
+	printf("PASS");
 	printf("\n");
 }
 
