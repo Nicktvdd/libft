@@ -135,9 +135,13 @@ void	testmemmove()
 }
 void	testmemcpy()
 {
-	
+
 }
 void	teststrlcpy()
+{
+
+}
+void	teststrlcat()
 {
 
 }
@@ -161,10 +165,7 @@ int	main(void)
 	testmemcpy();
 	testmemmove();
 	teststrlcpy();
-
-
-	// strlcat
-
+	teststrlcat();
 
 	testtoupper(varc);
 	testtolower(varc);
