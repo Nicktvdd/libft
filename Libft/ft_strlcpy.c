@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 18:26:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 15:19:22 by nvan-den         ###   ########.fr       */
+/*   Created: 2022/10/27 15:00:51 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/27 15:40:31 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;
 
-	i = 0;
-	while (s[i])
+	i = 1;
+	if (dstsize == 0)
+		return (NULL);
+	else
 	{
-		i++;
+		while (i++ < dstsize)
+		{
+			dst[i] = src[i];
+		}
+		dst[i] = NULL;
 	}
-	return (i);
+	return (ft_strlen(src));
 }

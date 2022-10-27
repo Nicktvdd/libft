@@ -129,7 +129,18 @@ void	testbzero()
 	printf(" PASS");
 	printf("\n");
 }
+void	testmemmove()
+{
 
+}
+void	testmemcpy()
+{
+	
+}
+void	teststrlcpy()
+{
+
+}
 
 int	main(void)
 {
@@ -145,17 +156,11 @@ int	main(void)
 	testprint(varc);
 	teststrlen(vars);
 	testmemset();
-
 	testbzero();
 
-
-	// memcpy
-
-
-	// memmove
-
-
-	// strlcpy
+	testmemcpy();
+	testmemmove();
+	teststrlcpy();
 
 
 	// strlcat
