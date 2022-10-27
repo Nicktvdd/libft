@@ -121,12 +121,12 @@ void	testbzero()
 	{
 		if (str[i] != str2[i])
 		{
-			printf("FAIL");
+			printf(" FAIL");
 			return;
 		}
 		i++;
 	}
-	printf("PASS");
+	printf(" PASS");
 	printf("\n");
 }
 
