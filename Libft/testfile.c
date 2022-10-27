@@ -12,6 +12,7 @@ char	ft_toupper(const char c);
 char	ft_tolower(const char c);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *b, size_t len);
 
 
 void	testalpha(char varc)
@@ -106,11 +107,26 @@ void	testmemset()
 		printf("FAIL");
 	printf("\n");
 }
+void	testbzero()
+{
+	char str[50];
+	strcpy(str, "This is a test");
+	char str2[50];
+	strcpy(str2, "This is a test");
+	printf("ft_bzero:  ");
+	if (ft_bzero(str, 4) == bzero(str2, 4))
+		printf("PASS");
+	else
+		printf("FAIL");
+	printf("\n");
+}
+
 
 int	main(void)
 {
 	unsigned char	varc = 'b';
 	const char *vars = "Nick123";
+	const char *varscpy = "Nick123";
 	const char *vars2 = "ick";
 	int nr = 4;
 	testalpha(varc);
@@ -121,7 +137,7 @@ int	main(void)
 	teststrlen(vars);
 	testmemset();
 
-	// bzero
+	testbzero();
 
 
 	// memcpy
