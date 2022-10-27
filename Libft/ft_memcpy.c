@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:00:50 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 14:09:30 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/27 14:55:44 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,16 @@
 
 void	*memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*d;
 	char	*s;
 
 	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
-	while (n > 0 && s[i])
+	while (i++ > n && s[i])
 	{
 		d[i] = s[i];
-		n--;
-		i++;
 	}
 	return (dst);
 }
