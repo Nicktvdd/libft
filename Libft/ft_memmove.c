@@ -6,13 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 15:33:02 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 14:59:35 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/28 10:18:43 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 	char	*d;

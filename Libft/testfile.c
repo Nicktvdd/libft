@@ -94,18 +94,18 @@ void	testmemset()
 	char str2[50];
 	strcpy(str2, "This is a test");
 	printf("ft_memset:  ");
-
+	ft_memset(str, '$', 4);
+	memset(str2, '$', 4);
 	while (str[i])
 	{
 		if (str[i] != str2[i])
 		{
-			printf("FAIL");
+			printf("FAIL\n");
 			return;
 		}
 		i++;
 	}
-	printf("PASS");
-	printf("\n");
+	printf("PASS\n");
 }
 void	testbzero()
 {
@@ -121,17 +121,33 @@ void	testbzero()
 	{
 		if (str[i] != str2[i])
 		{
-			printf(" FAIL");
+			printf(" FAIL\n");
 			return;
 		}
 		i++;
 	}
-	printf(" PASS");
-	printf("\n");
+	printf(" PASS\n");
 }
 void	testmemmove()
 {
-
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstring";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstring";
+	printf("ft_memmove: ");
+	ft_memmove(dest, src, 9);
+	memmove(dest2, src2, 9);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
 }
 void	testmemcpy()
 {

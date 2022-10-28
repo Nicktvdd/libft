@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:55:07 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 15:49:25 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/28 11:18:57 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	i = 0;
 	while (len > 0)
 	{
-		d[i] = c;
+		d[i++] = c;
 		len--;
 	}
 	return (d);
