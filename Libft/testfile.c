@@ -304,12 +304,10 @@ int	main(void)
 	testtolower(varc);
 	teststrchr();
 	teststrrchr();
-
-	// memchr
 	testmemchr();
-
-	// strnstr
 	teststrnstr(vars, vars2, 3);
+
+	// memcmp
 
 	// atoi
 
