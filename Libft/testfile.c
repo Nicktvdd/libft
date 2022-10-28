@@ -151,7 +151,25 @@ void	testmemmove()
 }
 void	testmemcpy()
 {
-
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstringislonger";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstringislonger";
+	printf("ft_memcpy: ");
+	ft_memcpy(dest, src, 9);
+	memcpy(dest2, src2, 9);
+	printf("\nft is: %s\nnormal is: %s\n", dest, dest2);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
 }
 void	teststrlcpy()
 {
