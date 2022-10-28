@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:09:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/28 12:49:23 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:18:08 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif /*HEADER_H*/
