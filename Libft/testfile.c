@@ -214,7 +214,7 @@ void	teststrlcat()
 }
 void	teststrchr()
 {
-	int i = 0;
+/* 	int i = 0;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
 	printf("ft_strchr:  ");
@@ -229,27 +229,58 @@ void	teststrchr()
 		}
 		i++;
 	}
+	printf("PASS\n"); */
+
+	int i = 0;
+	void *ptr;
+	void *ptr2;
+	const char src[] = "newstringislonger";
+	const char src2[] = "newstringislonger";
+	printf("ft_strrchr: ");
+	ptr = ft_strchr(src, 'i');
+	ptr2 = strchr(src2, 'i');
+	if (ptr != ptr2)
+	{
+		printf("FAIL\n");
+		return;
+	}
 	printf("PASS\n");
 }
 void	teststrrchr()
 {
 	int i = 0;
+	void *ptr;
+	void *ptr2;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
 	printf("ft_strrchr: ");
-	ft_strrchr(src, 'i');
-	strrchr(src2, 'i');
-	while (src[i])
+	ptr = ft_strrchr(src, 'i');
+	ptr2 = strrchr(src2, 'i');
+	if (ptr != ptr2)
 	{
-		if (src[i] != src[i])
-		{
-			printf("FAIL\n");
-			return;
-		}
-		i++;
+		printf("FAIL\n");
+		return;
 	}
 	printf("PASS\n");
 }
+void	testmemchr()
+{
+	int i = 0;
+	void *ptr;
+	void *ptr2;
+	const char src[] = "newstringislonger";
+	const char src2[] = "newstringislonger";
+	printf("ft_memchr:  ");
+	ptr = ft_memchr(src, 'i', 9);
+	ptr2 = memchr(src, 'i', 9);
+	if (ptr != ptr2)
+	{
+		printf("FAIL\n");
+		return;
+	}
+	printf("PASS\n");
+}
+
 int	main(void)
 {
 	unsigned char	varc = 'b';
@@ -271,12 +302,11 @@ int	main(void)
 	teststrlcat();
 	testtoupper(varc);
 	testtolower(varc);
-
 	teststrchr();
 	teststrrchr();
 
 	// memchr
-
+	testmemchr();
 
 	// strnstr
 	teststrnstr(vars, vars2, 3);
