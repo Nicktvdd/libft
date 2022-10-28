@@ -215,16 +215,14 @@ void	teststrlcat()
 void	teststrchr()
 {
 	int i = 0;
-	char dest[] = "oldstring";
 	const char src[] = "newstringislonger";
-	char dest2[] = "oldstring";
 	const char src2[] = "newstringislonger";
-	printf("ft_strchr: ");
-	ft_strchr(src, 9);
-	strchr(src2, 9);
-	while (dest[i])
+	printf("ft_strchr:  ");
+	ft_strchr(src, 'i');
+	strchr(src2, 'i');
+	while (src[i])
 	{
-		if (dest[i] != dest2[i])
+		if (src[i] != src[i])
 		{
 			printf("FAIL\n");
 			return;
@@ -236,16 +234,14 @@ void	teststrchr()
 void	teststrrchr()
 {
 	int i = 0;
-	char dest[] = "oldstring";
 	const char src[] = "newstringislonger";
-	char dest2[] = "oldstring";
 	const char src2[] = "newstringislonger";
 	printf("ft_strrchr: ");
-	ft_strrchr(src, 9);
-	strrchr(src2, 9);
-	while (dest[i])
+	ft_strrchr(src, 'i');
+	strrchr(src2, 'i');
+	while (src[i])
 	{
-		if (dest[i] != dest2[i])
+		if (src[i] != src[i])
 		{
 			printf("FAIL\n");
 			return;
