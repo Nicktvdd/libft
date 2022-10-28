@@ -212,7 +212,48 @@ void	teststrlcat()
 	}
 	printf("PASS\n");
 }
-
+void	teststrchr()
+{
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstringislonger";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstringislonger";
+	printf("ft_strchr: ");
+	ft_strchr(src, 9);
+	strchr(src2, 9);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
+}
+void	teststrrchr()
+{
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstringislonger";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstringislonger";
+	printf("ft_strrchr: ");
+	ft_strrchr(src, 9);
+	strrchr(src2, 9);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
+}
 int	main(void)
 {
 	unsigned char	varc = 'b';
@@ -235,11 +276,8 @@ int	main(void)
 	testtoupper(varc);
 	testtolower(varc);
 
-	// strchr
-
-
-	// strrchr
-
+	teststrchr();
+	teststrrchr();
 
 	// memchr
 
