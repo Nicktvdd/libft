@@ -4,7 +4,7 @@
 #include <strings.h>
 #include "libft.h"
 
-
+// printf("ft is: %s\n norm is: %s\n", dest, dest2);
 void	testalpha(char varc)
 {
 	printf("ft_isalpha: ");
@@ -156,10 +156,9 @@ void	testmemcpy()
 	const char src[] = "newstringislonger";
 	char dest2[] = "oldstring";
 	const char src2[] = "newstringislonger";
-	printf("ft_memcpy: ");
+	printf("ft_memcpy:  ");
 	ft_memcpy(dest, src, 9);
 	memcpy(dest2, src2, 9);
-	printf("\nft is: %s\nnormal is: %s\n", dest, dest2);
 	while (dest[i])
 	{
 		if (dest[i] != dest2[i])
@@ -173,11 +172,45 @@ void	testmemcpy()
 }
 void	teststrlcpy()
 {
-
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstringislonger";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstringislonger";
+	printf("ft_strlcpy: ");
+	ft_strlcpy(dest, src, 9);
+	strlcpy(dest2, src2, 9);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
 }
 void	teststrlcat()
 {
-
+	int i = 0;
+	char dest[] = "oldstring";
+	const char src[] = "newstringislonger";
+	char dest2[] = "oldstring";
+	const char src2[] = "newstringislonger";
+	printf("ft_strlcat: ");
+	ft_strlcat(dest, src, 9);
+	strlcat(dest2, src2, 9);
+	while (dest[i])
+	{
+		if (dest[i] != dest2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
 }
 
 int	main(void)
@@ -195,16 +228,12 @@ int	main(void)
 	teststrlen(vars);
 	testmemset();
 	testbzero();
-
 	testmemcpy();
 	testmemmove();
 	teststrlcpy();
 	teststrlcat();
-
 	testtoupper(varc);
 	testtolower(varc);
-
-
 
 	// strchr
 
