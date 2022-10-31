@@ -330,7 +330,15 @@ void	testsubstr()
 	printf("ft_substr:  ");
 	printf("%s\n", ft_substr(src, 2, 5));
 }
+void	teststrjoin()
+{
+	int i = 0;
+	const char src[] = "oldstring";
+	const char src2[] = "appendage";
+	printf("ft_strjoin: ");
+	printf("%s\n", ft_strjoin(src, src2));
 
+}
 
 int	main(void)
 {
@@ -363,7 +371,7 @@ int	main(void)
 	teststrdup();
 
 	testsubstr();
-	
+	teststrjoin();
 	
 	
 	return (0);

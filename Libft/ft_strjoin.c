@@ -6,26 +6,26 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:10:36 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 17:56:25 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/31 16:45:14 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 // i would use strcpy?
-int	ft_strlen(const char *s);
+#include "libft.h"
 
-char	*strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
 	int		i;
 	int		j;
 	int		s2size;
 
-	s2size = (sizeof(s2) * ft_strlen(*s2));
+	s2size = (sizeof(s2) * ft_strlen(s2));
 	j = 0;
 	i = 0;
-	newstr = malloc((sizeof(s1) * ft_strlen(*s1)) + s2size + 1);
-	if (newstr != NULL)
+	newstr = malloc((sizeof(s1) * ft_strlen(s1)) + s2size + 1);
+	if (newstr == NULL)
 		return (NULL);
 	while (s1[i])
 	{
@@ -38,6 +38,6 @@ char	*strjoin(char const *s1, char const *s2)
 		j++;
 		i++;
 	}
-	newstr[i] = NULL;
+	newstr[i] = '\0';
 	return (newstr);
 }
