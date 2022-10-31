@@ -323,6 +323,14 @@ void	teststrdup()
 	printf("PASS\n");
 
 }
+void	testsubstr()
+{
+	int i = 0;
+	const char src[] = "newstringislonger";
+	printf("ft_substr:  ");
+	printf("%s\n", ft_substr(src, 2, 5));
+}
+
 
 int	main(void)
 {
@@ -353,6 +361,8 @@ int	main(void)
 	testatoi();
 	testcalloc();
 	teststrdup();
+
+	testsubstr();
 	
 	
 	
