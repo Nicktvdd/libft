@@ -214,7 +214,7 @@ void	teststrlcat()
 }
 void	teststrchr()
 {
-	int i = 0;
+/* 	int i = 0;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
 	printf("ft_strchr:  ");
@@ -222,40 +222,39 @@ void	teststrchr()
 	strchr(src2, 'i');
 	while (src[i])
 	{
-		if (src[i] != src[i])
+		if (src[i] != src2[i])
 		{
 			printf("FAIL\n");
 			return;
 		}
 		i++;
 	}
-	printf("PASS\n");
+	printf("PASS\n"); */
 
-	/* int i = 0;
+	int i = 0;
 	void *ptr;
 	void *ptr2;
 	const char src[] = "newstringislonger";
-	const char src2[] = "newstringislonger";
-	printf("ft_strchr: ");
+	printf("ft_strchr:  ");
 	ptr = ft_strchr(src, 'i');
-	ptr2 = strchr(src2, 'i');
+	ptr2 = strchr(src, 'i');
 	if (ptr != ptr2)
 	{
 		printf("FAIL\n");
 		return;
 	}
-	printf("PASS\n"); */
+	printf("PASS\n");
 }
 void	teststrrchr()
 {
 	int i = 0;
-	void *ptr;
-	void *ptr2;
+	char *ptr;
+	char *ptr2;
 	const char src[] = "newstringislonger";
-	const char src2[] = "newstringislonger";
 	printf("ft_strrchr: ");
 	ptr = ft_strrchr(src, 'i');
-	ptr2 = strrchr(src2, 'i');
+	ptr2 = strrchr(src, 'i');
+	printf("ft is %c\n normal is %c\n", ptr[0], ptr2[0]);
 	if (ptr != ptr2)
 	{
 		printf("FAIL\n");
@@ -269,7 +268,6 @@ void	testmemchr()
 	void *ptr;
 	void *ptr2;
 	const char src[] = "newstringislonger";
-	const char src2[] = "newstringislonger";
 	printf("ft_memchr:  ");
 	ptr = ft_memchr(src, 'i', 9);
 	ptr2 = memchr(src, 'i', 9);
