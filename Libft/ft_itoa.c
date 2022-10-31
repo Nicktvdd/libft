@@ -6,13 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:15:04 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/31 11:23:50 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		i;
 	int		len;

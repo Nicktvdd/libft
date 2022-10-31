@@ -280,6 +280,15 @@ void	testmemchr()
 	}
 	printf("PASS\n");
 }
+void	testatoi()
+{
+	char c[10] = "-420";
+	printf("ft_atoi:    ");
+	if (ft_atoi(c) == atoi(c))
+		printf("PASS\n");
+	else
+		printf("FAIL\n");
+}
 
 int	main(void)
 {
@@ -310,6 +319,7 @@ int	main(void)
 	// memcmp
 
 	// atoi
+	testatoi();
 
 
 	// calloc

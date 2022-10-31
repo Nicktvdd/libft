@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/31 11:21:51 by nvan-den         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 int	ft_atoi(char *str)
@@ -9,24 +21,25 @@ int	ft_atoi(char *str)
 	i = 0;
 	res = 0;
 	min = 1;
-	while (str[i] == ' ') //and other empty spaces)
+	while (str[i] == ' ' ||str[i] == '\n' ||str[i] == '\v'||str[i] == '\t' 
+				||str[i] == '\f' ||str[i] == '\r' )
 	{
 		i++;
 	}
 	if (str[i] == '-')
 	{
-		if (str == -2147483648)
-			res = 2;
 		min = -1;
 		i++;
 	}
+	else if (str[i] == '+')
+		i++;
 	if (str[i] == '+' || str[i] == '-')
 		return (0);
-	while (str[i])
+	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = (res * 10) + (str[i] - '0');
 		i++;
 	}
-	return ((res / 10) * min);
+	return (res * min);
 
 }
