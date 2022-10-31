@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:58:56 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 12:42:11 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/31 16:54:43 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*string;
-	
+
 	string = malloc(sizeof(size) * count);
 	if (string == NULL)
 		return (0);
