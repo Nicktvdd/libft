@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 11:24:38 by nvan-den         ###   ########.fr       */
+/*   Created: 2022/10/31 11:27:44 by nvan-den          #+#    #+#             */
+/*   Updated: 2022/10/31 11:56:02 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_itoa(int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
-	int		len;
-	char	*a;
+	size_t			i;
+	size_t			j;
+	unsigned char	*c;
+	unsigned char	*h;
 
+	c = (unsigned char *)s1;
+	h = (unsigned char *)s2;
 	i = 0;
-	if (n < 0)
+	j = 0;
+	while (j < n)
 	{
-		a[i] = ('-');
-		n *= -1;
-		i++;
-		len++;
+		if (c[i] == h[i])
+	
+			i++;
+		j++;
 	}
-	while (n / 10)
-	{
-		ft_itoa(n / 10);
-		len++;
-	}
-	a = malloc(sizeof(char) * len + 1);
-	a[i++] = (n % 10 + '0');
-	a[i] = NULL;
-	return (a);
+	if (i == j)
+		return (0);
+	else if (sizeof(c[i]) - sizeof(h[i]) == 0)
+		return sizeof(c[i]);
+	else
+		return (sizeof(c[i]) - sizeof(h[i]));
 }

@@ -289,6 +289,20 @@ void	testatoi()
 	else
 		printf("FAIL\n");
 }
+void	testmemcmp()
+{
+	int i = 0;
+	const char src[] = "newstringislonger";
+	const char src2[] = "newstringislonger";
+	printf("ft is: %i\n normal is: %i\n", ft_memcmp(src, src2, 9), memcmp(src, src2, 9));
+	printf("ft_memcmp:  ");
+	if (ft_memcmp(src, src2, 9) != memcmp(src, src2, 9))
+	{
+		printf("FAIL\n");
+		return;
+	}
+	printf("PASS\n");
+}
 
 int	main(void)
 {
@@ -317,6 +331,7 @@ int	main(void)
 	teststrnstr(vars, vars2, 3);
 
 	// memcmp
+	testmemcmp();
 
 	// atoi
 	testatoi();
