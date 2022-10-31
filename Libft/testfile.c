@@ -214,7 +214,7 @@ void	teststrlcat()
 }
 void	teststrchr()
 {
-/* 	int i = 0;
+	int i = 0;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
 	printf("ft_strchr:  ");
@@ -229,14 +229,14 @@ void	teststrchr()
 		}
 		i++;
 	}
-	printf("PASS\n"); */
+	printf("PASS\n");
 
-	int i = 0;
+	/* int i = 0;
 	void *ptr;
 	void *ptr2;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
-	printf("ft_strrchr: ");
+	printf("ft_strchr: ");
 	ptr = ft_strchr(src, 'i');
 	ptr2 = strchr(src2, 'i');
 	if (ptr != ptr2)
@@ -244,7 +244,7 @@ void	teststrchr()
 		printf("FAIL\n");
 		return;
 	}
-	printf("PASS\n");
+	printf("PASS\n"); */
 }
 void	teststrrchr()
 {
