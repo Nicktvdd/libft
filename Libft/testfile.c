@@ -5,6 +5,7 @@
 #include "libft.h"
 
 // printf("ft is: %s\n norm is: %s\n", dest, dest2);
+// printf("ft is %c\n normal is %c\n", ptr[0], ptr2[0]);
 void	testalpha(char varc)
 {
 	printf("ft_isalpha: ");
@@ -254,7 +255,6 @@ void	teststrrchr()
 	printf("ft_strrchr: ");
 	ptr = ft_strrchr(src, 'i');
 	ptr2 = strrchr(src, 'i');
-	printf("ft is %c\n normal is %c\n", ptr[0], ptr2[0]);
 	if (ptr != ptr2)
 	{
 		printf("FAIL\n");
