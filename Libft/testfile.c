@@ -294,7 +294,6 @@ void	testmemcmp()
 	int i = 0;
 	const char src[] = "newstringislonger";
 	const char src2[] = "newstringislonger";
-	printf("ft is: %i\n normal is: %i\n", ft_memcmp(src, src2, 9), memcmp(src, src2, 9));
 	printf("ft_memcmp:  ");
 	if (ft_memcmp(src, src2, 9) != memcmp(src, src2, 9))
 	{
@@ -306,6 +305,25 @@ void	testmemcmp()
 void	testcalloc()
 {
 	//no idea how to test
+}
+void	teststrdup()
+{
+	int i = 0;
+	char src[] = "42 school";
+	char* str = ft_strdup(src);
+	char* str2 = strdup(src);
+	printf("ft_stdup:   ");
+	while (src[i])
+	{
+		if (str[i] != str2[i])
+		{
+			printf("FAIL\n");
+			return;
+		}
+		i++;
+	}
+	printf("PASS\n");
+
 }
 
 int	main(void)
@@ -335,10 +353,8 @@ int	main(void)
 	teststrnstr(vars, vars2, 3);
 	testmemcmp();
 	testatoi();
-	// calloc
 	testcalloc();
-
-	// strdup
+	teststrdup();
 	
 	
 	
