@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:09:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 11:31:42 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/10/31 12:23:34 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char	*ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(char *str);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif /*HEADER_H*/

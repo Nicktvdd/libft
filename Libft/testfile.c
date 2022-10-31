@@ -303,6 +303,10 @@ void	testmemcmp()
 	}
 	printf("PASS\n");
 }
+void	testcalloc()
+{
+	//no idea how to test
+}
 
 int	main(void)
 {
@@ -329,16 +333,10 @@ int	main(void)
 	teststrrchr();
 	testmemchr();
 	teststrnstr(vars, vars2, 3);
-
-	// memcmp
 	testmemcmp();
-
-	// atoi
 	testatoi();
-
-
 	// calloc
-
+	testcalloc();
 
 	// strdup
 	
