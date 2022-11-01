@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 11:24:38 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/01 15:59:14 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,31 @@ char	*ft_itoa(int n)
 {
 	int		i;
 	int		len;
-	char	*a;
+	char	*str;
+	int		buffer;
 
 	i = 0;
-	if (n < 0)
+	len = 0;
+	buffer = n;
+	if (buffer < 0)
 	{
-		a[i] = ('-');
 		n *= -1;
-		i++;
 		len++;
 	}
+	while (buffer / 10)
+	{
+		buffer = buffer / 10;
+		len++;
+	}
+	str = malloc(sizeof(char) * len + 1);
+	if (n < 0)
+		str[i++] = ('-');
 	while (n / 10)
 	{
-		ft_itoa(n / 10);
-		len++;
+		n = n / 10;
+		str[i] = (n % 10 + '0');
+		i++;
 	}
-	a = malloc(sizeof(char) * len + 1);
-	a[i++] = (n % 10 + '0');
-	a[i] = NULL;
-	return (a);
+	str[i] = '\0';
+	return (str);
 }
