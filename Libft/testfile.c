@@ -347,10 +347,15 @@ void	teststrtrim()
 }
 void	testsplit()
 {
-	const char str[] = "ocharmingstringle";
-	const char delimiter[] = "i";
-	printf("ft_split: ");
-	printf("%s\n", ft_split(str, delimiter));
+	//const char str[] = "ocharmingstringle";
+	//const char delimiter = 'i';
+	printf("ft_split:   ");
+	//char **res = ft_split(str, delimiter);
+	printf("FAIL\n");
+}
+void	testitoa()
+{
+
 }
 
 int	main(void)
@@ -387,7 +392,7 @@ int	main(void)
 	teststrjoin();
 	teststrtrim();
 	testsplit();
-	
+	testitoa();
 	
 	return (0);
 }

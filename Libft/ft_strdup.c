@@ -6,11 +6,10 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 12:25:23 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 16:56:11 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/01 14:58:37 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *src)

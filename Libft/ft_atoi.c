@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 16:54:19 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/01 15:19:04 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	res;
-	int	min;
+	int		i;
+	long	res;
+	int		min;
 
 	i = 0;
 	res = 0;
@@ -35,5 +35,5 @@ int	ft_atoi(char *str)
 		return (0);
 	while (str[i] >= '0' && str[i] <= '9')
 		res = (res * 10) + (str[i++] - '0');
-	return (res * min);
+	return ((int)res * min);
 }
