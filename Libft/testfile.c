@@ -332,12 +332,18 @@ void	testsubstr()
 }
 void	teststrjoin()
 {
-	int i = 0;
 	const char src[] = "oldstring";
 	const char src2[] = "appendage";
 	printf("ft_strjoin: ");
 	printf("%s\n", ft_strjoin(src, src2));
 
+}
+void	teststrtrim()
+{
+	const char str[] = "ocharmingstringle";
+	const char trim[] = "oel";
+	printf("ft_strtrim: ");
+	printf("%s\n", ft_strtrim(str, trim));
 }
 
 int	main(void)
@@ -372,6 +378,7 @@ int	main(void)
 
 	testsubstr();
 	teststrjoin();
+	teststrtrim();
 	
 	
 	return (0);

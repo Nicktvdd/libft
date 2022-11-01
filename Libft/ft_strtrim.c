@@ -6,38 +6,67 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 15:50:43 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/01 13:48:36 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s);
+int	ft_start(char const *s1, char const *set)
+{
+	size_t	start;
+	size_t	i;
+
+	start = 0;
+	i = -1;
+	while (set[++i])
+	{
+		if (s1[start] == set[i])
+		{
+			start++;
+			i = 0;
+		}
+	}
+	return (start);
+}
+
+int	ft_end(char const *s1, char const *set)
+{
+	size_t	end;
+	size_t	i;
+
+	i = 0;
+	end = ft_strlen(s1) - 1;
+	while (set[++i])
+	{
+		if (s1[end] == set[i])
+		{
+			end--;
+			i = 0;
+		}
+	}
+	return (end);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	char	*newstring;
+	size_t		start;
+	size_t		j;
+	size_t		k;
+	size_t		end;
+	char		*newstring;
 
-	i = 0;
-	j = 0;
-	newstring = malloc(sizeof(*s1) * ft_strlen(*s1) + 1);
-	newstring = s1;
-	while (newstring[i] == set[i])
+	start = ft_start(s1, set);
+	j = -1;
+	k = 0;
+	end = ft_end(s1, set);
+	newstring = malloc(sizeof(*s1) * (end - start));
+	if (newstring == NULL)
+		return (0);
+	while (start <= end)
 	{
-		newstring[i] = NULL;
-		i++;
+		newstring[k++] = s1[start++];
 	}
-	newstring = &newstring[i];
-	while (newstring[i])
-		i++;
-	i--;
-	while (newstring[i] == set[j])
-	{
-		newstring[i] = NULL;
-		i--;
-		j++;
-	}
+	newstring[k] = '\0';
 	return (newstring);
 }
