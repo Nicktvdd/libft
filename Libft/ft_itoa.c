@@ -6,11 +6,34 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/01 16:13:28 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/01 16:18:04 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+// make a function to do putnbr recursively
+char	*recursion(int n)
+{
+	int	i;
+
+	i = 0;
+	if (n < 0)
+	{
+		ft_putchar ('-');
+		if (n <= -2147483648)
+		{
+			ft_putchar('2');
+			n = n % -1000000000;
+		}
+			nb= n * -1;
+	}
+	if (n / 10)
+	{
+		ft_putnbr(n / 10);
+	}
+	while 
+	str[j] = (n % 10 + '0');
+}
 
 char	*ft_itoa(int n)
 {
