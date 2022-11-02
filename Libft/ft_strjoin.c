@@ -6,12 +6,10 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:10:36 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 16:45:14 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:06:53 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-// i would use strcpy?
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

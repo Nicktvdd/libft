@@ -6,12 +6,12 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/01 15:19:04 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:05:29 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
+#include "libft.h"
+// ascii
 int	ft_atoi(char *str)
 {
 	int		i;

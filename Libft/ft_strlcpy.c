@@ -6,11 +6,10 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:00:51 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 14:38:16 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:07:02 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:27:44 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 16:55:55 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:06:01 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

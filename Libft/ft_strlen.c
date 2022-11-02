@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:26:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 15:19:22 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:07:10 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

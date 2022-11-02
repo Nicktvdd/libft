@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 10:56:18 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 15:06:05 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 int	ft_counter(int n)
 {
