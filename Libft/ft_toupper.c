@@ -6,20 +6,15 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:28:17 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 13:36:58 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:55:43 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_toupper(const char c)
+int	ft_toupper(int c)
 {
-	int		i;
-	char	d;
-
-	i = 0;
-	d = c;
 	if (c >= 'a' && c <= 'z')
 	{
-		d = c - 32;
+		return(c - 32);
 	}
-	return (d);
+	return (c);
 }
