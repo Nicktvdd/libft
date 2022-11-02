@@ -6,22 +6,21 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 11:26:44 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/27 11:42:10 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 14:45:26 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *b, size_t len)
 {
-	int		i;
-	char	*d;
+	size_t	i;
 
-	d = (char *)b;
+
 	i = 0;
-	while (len > 0)
+	while (i < len)
 	{
-		d[i] = 0;
-		len--;
+		((char *)b)[i] = 0;
+		i++;
 	}
 }
