@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:09:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 12:11:53 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:23:25 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <strings.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(unsigned char c);
 int		ft_isdigit(unsigned char c);
@@ -49,5 +50,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char*s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif /*HEADER_H*/

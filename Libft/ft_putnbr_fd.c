@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:16:58 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 12:20:59 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 12:24:47 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_putnbr_fd(int n, int fd)
 	i = 0;
 	if (n < 0)
 	{
-		ft_putchar ('-');
+		ft_putchar_fd ('-', fd);
 		if (n <= -2147483648)
 		{
 			ft_putchar_fd('2', fd);
@@ -29,7 +29,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n / 10)
 	{
-		ft_putnbr(n / 10);
+		ft_putnbr_fd(n / 10, fd);
 	}
 	ft_putchar_fd(n % 10 + '0', fd);
 }
