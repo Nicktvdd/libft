@@ -6,20 +6,15 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:44:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/26 13:37:00 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 16:11:16 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_tolower(const char c)
+int	ft_tolower(int c)
 {
-	int		i;
-	char	d;
-
-	i = 0;
-	d = c;
 	if (c >= 'A' && c <= 'Z')
 	{
-		d = c + 32;
+		return (c + 32);
 	}
-	return (d);
+	return (c);
 }
