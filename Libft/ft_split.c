@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:10 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/01 15:31:49 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 10:56:45 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ static char	*ft_cmalloc(char const *s, char c)
 	return (str);
 }
 
-
-static int ft_howmany_c(char const *s, char c)
+static int	ft_howmany_c(char const *s, char c)
 {
 	int	i;
 	int	c_counter;
