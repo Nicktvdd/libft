@@ -360,6 +360,13 @@ void	testitoa()
 	printf("ft_itoa:    ");
 	printf("%s\n", ft_itoa(num));
 }
+/* void	teststrmapi()
+{
+	char *lower[] = "blabla";
+
+	printf("%s\n", ft_strmapi("blabla", ft_toupper(1))
+} */
+
 
 int	main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:10 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 10:56:45 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 11:27:40 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char	*ft_cmalloc(char const *s, char c)
 
 	i = 0;
 	len = 0;
-	while (s[len] != c)
+	while (s[len] != c && s[len])
 	{
 		len++;
 	}
@@ -71,7 +71,7 @@ char	**ft_split(char const *s, char c)
 		{
 			j++;
 		}
-		j++;
+		i++;
 	}
 	split[i] = NULL;
 	return (split);
