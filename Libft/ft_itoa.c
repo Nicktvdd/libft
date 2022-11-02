@@ -6,13 +6,13 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/01 16:18:04 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 10:47:59 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 // make a function to do putnbr recursively
-char	*recursion(int n)
+/* char	*recursion(int n)
 {
 	int	i;
 
@@ -25,15 +25,14 @@ char	*recursion(int n)
 			ft_putchar('2');
 			n = n % -1000000000;
 		}
-			nb= n * -1;
+			n = n * -1;
 	}
 	if (n / 10)
 	{
-		ft_putnbr(n / 10);
+		recursion(n / 10);
 	}
-	while 
-	str[j] = (n % 10 + '0');
-}
+	return (n % 10 + '0');
+} */
 
 char	*ft_itoa(int n)
 {
@@ -58,13 +57,14 @@ char	*ft_itoa(int n)
 	str = malloc(sizeof(char) * len + 1);
 	if (n < 0)
 		str[i++] = ('-');
+	i = len;
 	while (n / 10)
 	{
-		str[i] = (n % 10 + '0');
+		str[len] = (n % 10 + '0');
 		n = n / 10;
-		i++;
+		len--;
 	}
-	str[i] = (n % 10 + '0');
+	str[len] = (n % 10 + '0');
 	i++;
 	str[i] = '\0';
 	return (str);

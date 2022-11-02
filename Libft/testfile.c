@@ -357,7 +357,7 @@ void	testitoa()
 {
 	int	num;
 	num = 123;
-	printf("ft_itoa:   ");
+	printf("ft_itoa:    ");
 	printf("%s\n", ft_itoa(num));
 }
 
