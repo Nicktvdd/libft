@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:47:47 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/25 18:50:13 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 13:39:03 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(unsigned char *s1, unsigned char *s2)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] || s2[i]) != '\0')
+	while (s1[i] == s2[i] && (s1[i] || s2[i]) != '\0' && i < n)
 	{
 			i++;
 	}
