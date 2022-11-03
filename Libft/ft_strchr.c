@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:46:13 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/31 13:02:52 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/02 17:04:36 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,11 @@ char	*ft_strchr(const char *s, int c)
 	{
 		i++;
 	}
+	if (str[i] == c)
+	{
 	str = &str[i];
 	return (str);
+	}
+	else
+		return (NULL);
 }
