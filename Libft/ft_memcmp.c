@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:27:44 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 15:06:01 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 10:58:44 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	if (i == j)
 		return (0);
-	else if (sizeof(c[i]) - sizeof(h[i]) == 0)
+	else if (c[i] - h[i] == 0)
 		return (sizeof(c[i]));
 	else
-		return (sizeof(c[i]) - sizeof(h[i]));
+		return (c[i] - h[i]);
 }
