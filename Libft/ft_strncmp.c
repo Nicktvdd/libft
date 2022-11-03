@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:47:47 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 13:39:03 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:41:07 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,25 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	size_t			j;
+	unsigned char	*c;
+	unsigned char	*h;
 
+	c = (unsigned char *)s1;
+	h = (unsigned char *)s2;
 	i = 0;
-	while (s1[i] == s2[i] && (s1[i] || s2[i]) != '\0' && i < n)
+	j = 0;
+	while (j < n && (s1[i] || s2[i] != '\0'))
 	{
+		if (c[i] == h[i])
 			i++;
+		j++;
 	}
-	return (s1[i] - s2[i]);
+	if (i == j)
+		return (0);
+	else if (c[i] - h[i] == 0)
+		return (sizeof(c[i]));
+	else
+		return (c[i] - h[i]);
 }

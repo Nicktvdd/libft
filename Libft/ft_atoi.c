@@ -6,12 +6,12 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 15:05:29 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:33:17 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// ascii
+// ascii for the first while loop.
 int	ft_atoi(char *str)
 {
 	int		i;
@@ -37,3 +37,6 @@ int	ft_atoi(char *str)
 		res = (res * 10) + (str[i++] - '0');
 	return ((int)res * min);
 }
+
+// handle overflow by when it multiplies, if it goes minus or something. Make another fucntion that handels overslow
+// it handles it by casting it to int and returning it.
