@@ -6,11 +6,11 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:57:04 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/10/24 18:59:25 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:12:59 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(unsigned char c)
+int	ft_isalnum(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (1);

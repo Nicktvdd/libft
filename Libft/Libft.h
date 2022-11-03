@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:09:16 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 13:39:45 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:13:57 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int		ft_isalpha(unsigned char c);
-int		ft_isdigit(unsigned char c);
-int		ft_isalnum(unsigned char c);
-int		ft_isascii(unsigned char c);
-int		ft_isprint(unsigned char c);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 char	ft_toupper(const char c);
 char	ft_tolower(const char c);

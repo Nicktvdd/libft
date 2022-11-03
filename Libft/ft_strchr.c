@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 15:46:13 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 17:04:36 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 11:26:26 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,11 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	i = 0;
 	while (str[i] != c && str[i] != '\0')
-	{
 		i++;
-	}
 	if (str[i] == c)
 	{
-	str = &str[i];
-	return (str);
+		str = &str[i];
+		return (str);
 	}
 	else
 		return (NULL);
