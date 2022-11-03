@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:10:36 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 15:06:53 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:36:30 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		j;
 	int		s2size;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s2size = (sizeof(s2) * ft_strlen(s2));
 	j = 0;
 	i = 0;

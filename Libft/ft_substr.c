@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:38:03 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 15:07:31 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/03 16:34:24 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = start;
 	j = 0;
-	sub = malloc(sizeof(*s) * len + 1);
-	if (sub == NULL)
-	{
+	if (!s)
 		return (NULL);
-	}
-	while (j < len && s[i])
-	{
-		sub[j] = s[i];
-		i++;
-		j++;
-	}
-	sub[i] = '\0';
+	if (ft_strlen(s) < len)
+		len = 0;
+	if ((sub = malloc(sizeof(*s) * len + 1)) == NULL)
+		return (NULL);
+	ft_strlcpy(sub, s + start, len + 1);
 	return (sub);
 }
