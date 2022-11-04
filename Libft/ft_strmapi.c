@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:00 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 12:03:35 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/04 16:58:13 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 	char	*result;
 
+	if (!s || !f)
+		return (NULL);
 	len = ft_strlen(s);
 	i = 0;
 	result = malloc(sizeof(char) * len + 1);
