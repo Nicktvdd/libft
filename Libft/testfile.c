@@ -78,14 +78,19 @@ void	testtolower(char varc)
 		printf("FAIL");
 	printf("\n");
 }
-void	teststrnstr(const char *vars, const char *vars2, size_t len)
+void	teststrnstr()
 {
 	printf("ft_strnstr: ");
-	if (ft_strnstr(vars, vars2, len) == strnstr(vars, vars2, len))
-		printf("PASS");
+	char *s1 = "see FF your FF return FF now FF";
+	char *s2 = "FF";
+	size_t max = strlen(s1);
+	char *i1 = strnstr(s1, s2, max);
+	char *i2 = ft_strnstr(s1, s2, max);
+	printf("normal:%s\n ft: %s\n", i1, i2);
+	if (i1 == i2)
+		printf("PASS\n");
 	else
-		printf("FAIL");
-	printf("\n");
+		printf("FAIL\n");
 }
 void	testmemset()
 {
@@ -190,7 +195,6 @@ void	teststrlcpy()
 		}
 		i++;
 	}
-	printf("PASS\n");
 }
 void	teststrlcat()
 {
@@ -392,7 +396,7 @@ int	main(void)
 	teststrchr();
 	teststrrchr();
 	/* testmemchr(); */
-	/* teststrnstr(vars, vars2, 3); */
+	teststrnstr();
 	testmemcmp();
 	testatoi();
 	testcalloc();
