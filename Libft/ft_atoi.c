@@ -6,12 +6,21 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/03 11:33:17 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/04 15:36:48 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // ascii for the first while loop.
+
+int	ft_overflow(int min)
+{
+	if (min == -1)
+		return (0);
+	else
+		return (-1);
+}
+
 int	ft_atoi(char *str)
 {
 	int		i;
@@ -34,7 +43,13 @@ int	ft_atoi(char *str)
 	if (str[i] == '+' || str[i] == '-')
 		return (0);
 	while (str[i] >= '0' && str[i] <= '9')
+	{
 		res = (res * 10) + (str[i++] - '0');
+		if (res < 0)
+		{
+			return (res = ft_overflow(min));
+		}
+	}
 	return ((int)res * min);
 }
 
