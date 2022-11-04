@@ -356,7 +356,7 @@ void	testsplit()
 void	testitoa()
 {
 	int	num;
-	num = -156;
+	num = 2147483648;
 	printf("ft_itoa:    ");
 	printf("%s\n", ft_itoa(num));
 }
