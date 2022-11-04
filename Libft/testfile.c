@@ -344,8 +344,8 @@ void	teststrjoin()
 }
 void	teststrtrim()
 {
-	const char str[] = "ocharmingstringle";
-	const char trim[] = "oel";
+	const char str[] = "";
+	const char trim[] = "";
 	printf("ft_strtrim: ");
 	printf("%s\n", ft_strtrim(str, trim));
 }

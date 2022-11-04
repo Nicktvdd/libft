@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 16:22:47 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/04 16:55:30 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t		end;
 	char		*newstring;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = ft_start(s1, set);
 	k = 0;
 	end = ft_end(s1, set);
-	newstring = malloc(sizeof(*s1) * (end - start));
+	newstring = malloc(sizeof(*s1) * (end - start) + 2);
 	if (newstring == NULL)
 		return (0);
 	while (start <= end)
