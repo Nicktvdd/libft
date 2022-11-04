@@ -356,7 +356,7 @@ void	testsplit()
 void	testitoa()
 {
 	int	num;
-	num = 123;
+	num = -156;
 	printf("ft_itoa:    ");
 	printf("%s\n", ft_itoa(num));
 }
@@ -391,8 +391,8 @@ int	main(void)
 	testtolower(varc);
 	teststrchr();
 	teststrrchr();
-	testmemchr();
-	teststrnstr(vars, vars2, 3);
+	/* testmemchr(); */
+	/* teststrnstr(vars, vars2, 3); */
 	testmemcmp();
 	testatoi();
 	testcalloc();
