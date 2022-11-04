@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 16:21:36 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/04 16:22:47 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static int	ft_start(char const *s1, char const *set)
 
 	start = 0;
 	i = 0;
-
 	while (set[i])
 	{
 		while (s1[start] == set[i])
