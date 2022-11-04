@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:42:41 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 13:47:39 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/04 17:10:40 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ static int	ft_counter(int n)
 	return (len);
 }
 
-static char *ft_positive(int n, int len, char *str)
+static char	*ft_positive(int n, int len, char *str)
 {
-		while (--len >= 0)
+	while (--len >= 0)
 	{
 		str[len] = (n % 10 + '0');
 		n = n / 10;
@@ -36,9 +36,9 @@ static char *ft_positive(int n, int len, char *str)
 	return (str);
 }
 
-static char *ft_negative(int n, int len, char *str)
+static char	*ft_negative(int n, int len, char *str)
 {
-		while (--len > 0)
+	while (--len > 0)
 	{
 		str[len] = (n % 10 + '0');
 		n = n / 10;
@@ -58,7 +58,8 @@ char	*ft_itoa(int n)
 	{
 		len++;
 	}
-	if ((str = malloc(sizeof(char) * (len + 1))) == NULL)
+	(str = malloc(sizeof(char) * (len + 1)));
+	if (!str)
 		return (NULL);
 	if (n < 0)
 	{
