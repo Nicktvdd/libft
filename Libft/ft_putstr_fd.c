@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 12:09:20 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 17:01:18 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/07 13:50:44 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+		return;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
