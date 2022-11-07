@@ -84,8 +84,8 @@ void	teststrnstr()
 	char *s1 = "see FF your FF return FF now FF";
 	char *s2 = "FF";
 	size_t max = strlen(s1);
-	char *i1 = strnstr(s1, s2, max);
-	char *i2 = ft_strnstr(s1, s2, max);
+	char *i1 = strnstr("lorem ipsum dolor sit amet", "dolor", 0);
+	char *i2 = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 0);
 	printf("normal:%s\n ft: %s\n", i1, i2);
 	if (i1 == i2)
 		printf("PASS\n");

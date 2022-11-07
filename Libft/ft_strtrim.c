@@ -6,14 +6,14 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/07 13:17:13 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:11:46 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // strchr and strrchr
 
-static int ft_ischar(char c, char const *set)
+static int	ft_ischar(char c, char const *set)
 {
 	int	i;
 	int	result;
