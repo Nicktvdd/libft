@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 11:50:01 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/02 12:21:42 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:35:29 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,11 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int		i;
 
 	i = 0;
+	if (!s || !f)
+		return;
 	while (s[i])
 	{
-		f(i, s);
+		f(i, &s[i]);
 		i++;
 	}
 }
