@@ -6,75 +6,84 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:31:10 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 16:59:05 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:08:54 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // why is there a free function we can use?
-static char	*ft_cmalloc(char const *s, char c)
-{
-	int		len;
-	char	*str;
-	int		i;
 
-	i = 0;
-	len = 0;
-	while (s[len] != c && s[len])
-	{
-		len++;
-	}
-	str = malloc(sizeof(s) * (len + 1));
-	if (str == NULL)
-		return (0);
-	while (s[i] != c)
-	{
-		str[i] = s[i];
-		i++;
-	}
-	str[i] = '\0';
-	return (str);
+static size_t    ft_len(const char *s, char c)
+{
+    size_t    i;
+
+    i = 0;
+    while (s[i] != c && s[i] != '\0')
+    {
+        i++;
+    }
+    return (i);
 }
 
-static int	ft_howmany_c(char const *s, char c)
+static char    *ft_strinsert(const char *s, char c)
 {
-	int	i;
-	int	c_counter;
+    int        i;
+    char    *str;
 
-	i = -1;
-	c_counter = 0;
-	while (s[++i])
-	{
-		if (s[i] == c)
-			c_counter++;
-	}
-	return (c_counter);
+    i = 0;
+    str = (char *)malloc(sizeof(*s) * (ft_len(s, c)+ 1));
+    if (str == NULL)
+        return (0);
+    while (s[i] != c && s[i] != '\0')
+    {
+        str[i] = s[i];
+        i++;
+    }
+    str[i] = '\0';
+    return (str);
 }
 
-char	**ft_split(char const *s, char c)
+size_t    ft_stringcounter(const char *s, char c)
 {
-	int		c_counter;
-	char	**split;
-	int		i;
-	int		j;
+    size_t    i;
+    size_t    counter;
 
-	i = 0;
-	j = 0;
-	if (!s || !c)
+    i = 0;
+    counter = 0;
+    while (s[i])
+    {
+        while (s[i] == c)
+            i++;
+        if (s[i] != c && s[i] != '\0')
+            counter++;
+        while (s[i] != c && s[i] != '\0')
+            i++;
+    }
+    return (counter);
+}
+char    **ft_split(char const *s, char c)
+{
+    size_t    i;
+    size_t    j;
+    char    **array;
+
+    i = 0;
+    j = 0;
+	if (!s)
 		return (NULL);
-	c_counter = ft_howmany_c(s, c);
-	split = malloc(sizeof(s) * c_counter + 2);
-	if (split == NULL)
+    array = malloc(sizeof(s) * (ft_stringcounter(s, c) + 1));
+	if (array == NULL)
 		return (NULL);
-	while (i <= c_counter)
-	{
-		split[i] = ft_cmalloc(&s[j], c);
-		while (s[j] != c && s[j])
-		{
-			j++;
-		}
-		i++;
-	}
-	split[i] = NULL;
-	return (split);
+    while (j < ft_stringcounter(s,c))
+    {
+        while(s[i] == c && s[i] != '\0')
+        {
+            i++;
+        }
+        array[j] = ft_strinsert(&s[i], c);
+        i += ft_len(&s[i], c);
+        j++;
+    }
+    array[j] = NULL;
+    return (array);
 }
