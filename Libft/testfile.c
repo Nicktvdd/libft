@@ -344,8 +344,8 @@ void	teststrjoin()
 }
 void	teststrtrim()
 {
-	const char str[] = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
-	char *s2 = "Hello \t  Please\n Trim me !";
+	const char str[] = "  \t \t \n   \n\n\n\t";
+	char *s2 = "";
 	const char trim[] = " \n\t";
 	printf("ft_strtrim: ");
 	printf("%s\n", ft_strtrim(str, trim));
