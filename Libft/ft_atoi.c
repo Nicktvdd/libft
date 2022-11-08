@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/04 15:56:12 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:56:28 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ int	ft_atoi(char *str)
 	i = 0;
 	res = 0;
 	min = 1;
-	while (str[i] == ' ' || str[i] == '\n' || str[i] == '\v' || str[i] == '\t'
-		|| str[i] == '\f' || str[i] == '\r')
+	while (str[i] == ' ' || (str[i] > 8 && str[i] < 14))
 		i++;
 	if (str[i] == '-')
 	{
@@ -45,9 +44,7 @@ int	ft_atoi(char *str)
 	{
 		res = (res * 10) + (str[i++] - '0');
 		if (res < 0)
-		{
 			return (res = ft_overflow(min));
-		}
 	}
 	return ((int)res * min);
 }
