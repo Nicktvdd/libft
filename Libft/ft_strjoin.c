@@ -6,24 +6,37 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:10:36 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/07 16:22:36 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:45:20 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*ft_append(char const *s2, int i, char *newstr)
+{
+	int	j;
+
+	j = 0;
+	while (s2[j])
+	{
+		newstr[i] = s2[j];
+		j++;
+		i++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*newstr;
 	int		i;
-	int		j;
 	int		s2size;
 
+	i = 0;
 	if (!s1 || !s2)
 		return (NULL);
 	s2size = (sizeof(s2) * ft_strlen(s2));
-	j = 0;
-	i = 0;
 	newstr = malloc((sizeof(s1) * ft_strlen(s1)) + s2size + 1);
 	if (newstr == NULL)
 		return (NULL);
@@ -32,12 +45,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		newstr[i] = s1[i];
 		i++;
 	}
-	while (s2[j])
-	{
-		newstr[i] = s2[j];
-		j++;
-		i++;
-	}
-	newstr[i] = '\0';
+	ft_append(s2, i, newstr);
 	return (newstr);
 }
