@@ -6,7 +6,7 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 17:30:55 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/07 16:11:46 by nvan-den         ###   ########.fr       */
+/*   Updated: 2022/11/08 11:49:21 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_start(char const *s1, char const *set)
 	{
 		start++;
 	}
-	if (start >= strlen(s1))
+	if (start >= ft_strlen(s1))
 		start = 0;
 	return (start);
 }
