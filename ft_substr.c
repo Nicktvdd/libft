@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nick <nick@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:38:03 by nvan-den          #+#    #+#             */
-/*   Updated: 2022/11/09 11:00:17 by nvan-den         ###   ########.fr       */
+/*   Updated: 2023/04/30 20:25:49 by nick             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
-	size_t	i;
-	size_t	j;
 
 	i = start;
 	j = 0;
