@@ -6,11 +6,9 @@
 /*   By: nvan-den <nvan-den@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:57:53 by nvan-den          #+#    #+#             */
-/*   Updated: 2023/04/26 15:46:22 by nvan-den         ###   ########.fr       */
+/*   Updated: 2023/05/12 12:31:27 by nvan-den         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_overflow(int min)
 {
